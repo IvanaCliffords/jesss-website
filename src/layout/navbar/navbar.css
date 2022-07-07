@@ -1,0 +1,105 @@
+.navbar-wrapper {
+  width: 100%;
+  /* border: 1px solid red; */
+  position: relative;
+}
+
+.navbar-div {
+  display: none;
+  list-style: none;
+  align-items: center;
+}
+.navbar-logo {
+  padding: 1rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid blue; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 90;
+  height: 100px;
+  padding: 0 1rem;
+}
+
+.nav-item {
+  padding-right: 1.6rem;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.hamburger-menu {
+  padding: 1rem;
+  display: block;
+}
+
+.menu-line {
+  background-color: #000;
+  height: 1.4px;
+  width: 27px;
+  position: relative;
+  border-radius: 1px;
+  transition: all 300ms ease-in-out;
+  opacity: 1;
+}
+
+.menu-line::before,
+.menu-line::after {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  height: 1.4px;
+  width: 27px;
+  border-radius: 1px;
+  transition: all 300ms ease-in-out;
+}
+.menu-line::before {
+  transform: translateY(-7.5px);
+}
+.menu-line::after {
+  transform: translateY(7.5px);
+}
+
+/* 999999 HOVER &&&&&&&& */
+
+.hamburger-menu.show .menu-line {
+  transform: translateX(-35px);
+  background: transparent;
+   
+}
+
+.hamburger-menu.show .menu-line::before {
+  transform: rotate(45deg) translate(27px, -27px);
+}
+
+.hamburger-menu.show .menu-line::after {
+  transform: rotate(-45deg) translate(27px, 27px);
+}
+
+/* 999999 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+
+.logo-img {
+  width: 100px;
+}
+
+@media (min-width: 980px) {
+ 
+  .navbar-div {
+    display: flex;
+
+  }
+
+  .navbar-logo {
+    padding: 0 6rem;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+}

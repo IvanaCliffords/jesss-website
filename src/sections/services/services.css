@@ -1,0 +1,22 @@
+.services {
+    height: 100vh;
+    scroll-margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2rem;
+
+}
+
+.services-card {
+    background-color: #fafafa;
+    border-radius: 20px;
+} 
+
+@media screen and (min-width: 980px) {
+    .services {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 2rem 6rem;
+    }
+    
+}
